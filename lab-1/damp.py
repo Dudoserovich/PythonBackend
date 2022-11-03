@@ -7,7 +7,7 @@ f_damp = open('../../library.db', 'r', encoding ='utf-8-sig')
 damp = f_damp.read()
 # закрываем файл с дампом
 f_damp.close()
-2
+
 # запускаем запросы
 con.executescript(damp)
 # сохраняем информацию в базе данных
