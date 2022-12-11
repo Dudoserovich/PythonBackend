@@ -49,7 +49,7 @@ class Function:
         return f"{self.name} = {expression}"
 
 
-params = dict(a=-2, b=6, n=30)
+params = dict(a=-2, b=6, n=20)
 functions = [
     Function("f(x)", lambda x: x ** 3 - 6 * x ** 2 + x + 5, **params),
     Function("y(x)", lambda x: x ** 2 - 5 * x + 1, **params),
@@ -72,7 +72,7 @@ if __name__ == '__main__':
         result_html = template.render(
             functions=functions,
             function=function,
-            max_lines=10,
+            max_lines=18,
             plot=create_plot(x=function.x, y=function.y, plot_name="functions.jpg")
         )
         outfile.write(result_html)

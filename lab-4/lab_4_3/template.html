@@ -16,22 +16,22 @@
             <label>{{ category.loc[i, category.columns[1]] }}</label>
             {% endif %}
         </div>
-        {% end-for %}
+        {% endfor %}
     </fieldset>
-    {% end-macro %}
+    {% endmacro %}
     {% macro render_cards(card) %}
     {% set n = len(card) %}
     {% for i in range(n) %}
     <div class="card">
         {% for name in card.dtypes.index %}
         <p>{{ name }}: <b>{{ card.loc[i, name] }}</b></p>
-        {% end-for %}
+        {% endfor %}
         <div class="button-wrapper">
             <button type="submit">Выбрать</button>
         </div>
     </div>
-    {% end-for %}
-    {% end-macro %}
+    {% endfor %}
+    {% endmacro %}
     {% macro render_selected(relation, sel, name) %}
     {% if len(sel) != 0 %}
     <p>&nbsp;{{ name }}:
@@ -43,10 +43,10 @@
         {% elif id_r in sel and id_r != sel[-1] %}
         {{ relation.loc[i, relation.columns[1]] }},
         {% endif %}
-        {% end-for %}
+        {% endfor %}
     </p>
     {% endif %}
-    {% end-macro %}
+    {% endmacro %}
     <meta charset="UTF-8">
     <title>Книги</title>
     <link rel="stylesheet" href="main.css">

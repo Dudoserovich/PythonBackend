@@ -12,11 +12,11 @@ div {
   display: -webkit-box;
 }
 
-.setter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/*.setter {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/
 
 .representaion {
   display: flex;
